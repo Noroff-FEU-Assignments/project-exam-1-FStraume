@@ -7,12 +7,14 @@
     font-family: "Montserrat";
     src: url(/fonts/Montserrat-Medium.ttf) format("truetype");
 }
-html {
+html, 
+body {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
-    font-family: "Montserrat";
+    font-family: "Montserrat", 'Gill Sans MT', 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #FCFCFC;
     color: #707070;
 }
@@ -23,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "American Typewriter";
+  font-family: "American Typewriter", 'Times New Roman', Times, serif;
 }
 
 a {
@@ -40,6 +42,10 @@ header {
 
 footer {
  text-align: center;
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ height: 60px;
 }
 
 nav {
@@ -69,20 +75,25 @@ h2 {
 /*Front page */
 
 .fp-1 {
-    margin-bottom: 210px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
 }
 
 .fp-1-display {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: end;
     border: 1px solid #707070;
     padding: 50px;
+    text-align: left;
+    margin: 5px;
 }
 
 .fp-1-display img {
-    width: 350px;
-    height: 400px;
+    width: 150px;
+    height: 200px;
+    justify-self: end;
 }
 
 .fp-1-display h3 {
@@ -131,4 +142,90 @@ margin: 0px;
 .ap-1-display img {
     width: 250px;
     height: 300px;
+}
+
+/* Contact */
+
+.contact_cta {
+    display: block;
+    background-color: #010D26;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+}
+
+input, select, textarea {
+    border-radius: 5px;
+    border: 1px solid #010D26;
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+}
+
+textarea {
+    height: 300px;
+}
+
+.contact_form, 
+.contact_cta {
+    font-family: "Montserrat", 'Gill Sans MT', 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-wrapper > * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.formerror {
+    display: none;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.verification {
+    text-align: center;
+    padding: 50px;
+}
+
+.verify a {
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+
+/* My Journey */
+
+.myj-1-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 200px;
+}
+
+.myj-1-container img {
+    justify-self: center
+}
+
+.myj-2-container {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    margin-top: 80px;
+}
+
+.myj-po-sign {
+    align-self: end;
+}
+
+.myj-po-sign p {
+    margin: 5px;
+}
+
+.myj-po-sign h2 {
+    margin: 5px;
 }
