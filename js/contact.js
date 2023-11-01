@@ -67,5 +67,3 @@ const messageError = document.querySelector("#messageError");
     }
 
 
-
-    define( 'HEADLESS_MODE_CLIENT_URL', 'https://hiroy.club' );
