@@ -27,12 +27,12 @@ async function getPost (url) {
     const nextSlide = document.querySelector(".btn-next");
     
     
-    slides.forEach((slide, indx) => {
-      slide.style.transform = `translateX(${indx * 100}%)`;
+    slides.forEach((slide, i) => {
+      slide.style.transform = `translateX(${i * 100}%)`;
     });
     
     let curSlide = 0;
-    let maxSlide = slides.length - 1;
+    let maxSlide = slides.length;
     
     nextSlide.addEventListener("click", function () {
         if (curSlide === maxSlide) {
@@ -45,6 +45,23 @@ async function getPost (url) {
         slide.style.transform = `translateX(${100 * (i - curSlide)}%)`;
       });
     });
+
+    const prevSlide = document.querySelector(".btn-prev");
+
+// add event listener and navigation functionality
+prevSlide.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide--;
+  }
+
+  //   move slide by 100%
+  slides.forEach((slide, i) => {
+    slide.style.transform = `translateX(${100 * (i - curSlide)}%)`;
+  });
+});
     
 }
 
