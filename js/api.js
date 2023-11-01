@@ -8,6 +8,7 @@ async function getPost (url) {
     
     posts.forEach(function(post) {
 
+        
         container.innerHTML += `
         <div class="ap-1-display">
         <h3>${post.title.rendered}</h3>
@@ -17,6 +18,7 @@ async function getPost (url) {
         latestcontainer.innerHTML += `
         <div class="slide">
         <h3>${post.title.rendered}</h3>
+        <p>${post.content.rendered}</p>
         </div>`
 
     });
@@ -32,7 +34,7 @@ async function getPost (url) {
     });
     
     let curSlide = 0;
-    let maxSlide = slides.length;
+    let maxSlide = 6;
     
     nextSlide.addEventListener("click", function () {
         if (curSlide === maxSlide) {
@@ -48,16 +50,15 @@ async function getPost (url) {
 
     const prevSlide = document.querySelector(".btn-prev");
 
-// add event listener and navigation functionality
-prevSlide.addEventListener("click", function () {
-  // check if current slide is the first and reset current slide to last
-  if (curSlide === maxSlide) {
-    curSlide = 0;
-  } else {
+
+    prevSlide.addEventListener("click", function () {
+
+      if (curSlide === maxSlide) {
+        curSlide = 0;
+          } else {
     curSlide--;
   }
 
-  //   move slide by 100%
   slides.forEach((slide, i) => {
     slide.style.transform = `translateX(${100 * (i - curSlide)}%)`;
   });

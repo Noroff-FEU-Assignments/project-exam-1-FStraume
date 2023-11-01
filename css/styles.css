@@ -26,6 +26,7 @@ h4,
 h5,
 h6 {
   font-family: "American Typewriter", 'Times New Roman', Times, serif;
+  margin: 0px;
 }
 
 a {
@@ -64,7 +65,7 @@ nav li {
 }
 
 main {
-    max-width: 1600px;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -72,17 +73,20 @@ h2 {
     font-size: 2.5rem;
 }
 
+h3 {
+    font-size: 60px;
+}
+
 /*Front page */
 
 .fp-1 {
-    height: 100vh;
+    height: 650px;
     display: grid;
     place-items: center;
   }
   
   .fp-1-slider {
     width: 100%;
-    max-width: 800px;
     height: 350px;
     position: relative;
     overflow: hidden;
@@ -90,31 +94,35 @@ h2 {
   
   .slide {
     width: 100%;
-    max-width: 800px;
     height: 350px;
     position: absolute;
     transition: all 0.5s;
     background-color: #010D26;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .slide figure {
+
+  }
+
+  .slide p {
+    display: none;
+  }
+
+  .slide ol {
+    display: none;
   }
   
-  .btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
+  .slide-selector {
+    text-align: center;
     padding: 10px;
+}
+
+.btn {
+    background: none;
     border: none;
-    border-radius: 50%;
-    z-index: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    font-size: 18px;
-  }
+}
   
   .btn:active {
     transform: scale(1.1);
