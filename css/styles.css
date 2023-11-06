@@ -92,8 +92,8 @@ h3 {
     overflow: hidden;
   }
   
-  .slide, 
-  .ap-1-display {
+  .slide,
+  .allposts {
     width: 100%;
     height: 350px;
     display: grid;
@@ -143,10 +143,6 @@ h3 {
     background-repeat: no-repeat;
     background-position: center;
   }
-
-.ap-1-display {
-    margin-bottom: 50px;
-}
 
 /* Contact */
 
@@ -232,4 +228,19 @@ textarea {
 
 .myj-po-sign h2 {
     margin: 5px;
+}
+
+/* Spesific Post */
+
+.spesificPost {
+    max-width: 1200px;
+}
+
+.spesificPost img {
+    max-width: 1000px;
+    height: auto;
+}
+
+.spesificPost h2 {
+    font-size: 50px;
 }

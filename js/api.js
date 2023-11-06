@@ -3,17 +3,13 @@ const container = document.querySelector(".ap-1")
 const latestcontainer = document.querySelector(".fp-1-slider")
 
 async function getPosts (url) {
+    
+  try {
     const response = await fetch(url);
     const posts = await response.json()
     
     console.log(posts)
     posts.forEach(function(post) {
-        container.innerHTML += `
-        <div class="ap-1-display">
-        <a href="post.html?id=${post.id}" class="postTitle">${post.title.rendered}</a>
-        <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="postImg"></img>
-        </div>`
-
         latestcontainer.innerHTML += `
         <div class="slide">
         <a href="post.html?id=${post.id}" class="postTitle">${post.title.rendered}</a>
@@ -63,6 +59,11 @@ async function getPosts (url) {
     slide.style.transform = `translateX(${100 * (i - curSlide)}%)`;
   });
 });
+  } catch (error) {
+    console.log(error)
+  }
+
+
     
 }
 

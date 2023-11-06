@@ -32,9 +32,12 @@ fetchPost()
 
 function createHTML(spesificId) {
    articleView.innerHTML += `
-    <div class="ap-1-display">
-    <a href="post.html?id=${spesificId.id}">${spesificId.title.rendered}</a>
-    <img src="${spesificId._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></p>
+    <div class="spesificPost">
+    <h2>${spesificId.title.rendered}</h2>
+    <img src="${spesificId._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}"></img>
+    <div>${spesificId.content.rendered}</div>
+    <p class="info">Created by: ${spesificId._embedded.author[0].name}</p>
+    <p class="info">Last modified: ${spesificId.modified}</p>
     </div>`
    console.log(spesificId)
 }
