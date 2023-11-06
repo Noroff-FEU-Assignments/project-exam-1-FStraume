@@ -1,24 +1,23 @@
-const url = "https://straume.online/thepowderchase/wp-json/wp/v2/posts";
+const apiUrl = "https://straume.online/thepowderchase/wp-json/wp/v2/posts?_embed";
 const container = document.querySelector(".ap-1")
 const latestcontainer = document.querySelector(".fp-1-slider")
 
-async function getPost (url) {
+async function getPosts (url) {
     const response = await fetch(url);
     const posts = await response.json()
     
+    console.log(posts)
     posts.forEach(function(post) {
-
-        
         container.innerHTML += `
         <div class="ap-1-display">
-        <h3>${post.title.rendered}</h3>
-        <p>${post.content.rendered}</p>
+        <a href="post.html?id=${post.id}" class="postTitle">${post.title.rendered}</a>
+        <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="postImg"></img>
         </div>`
 
         latestcontainer.innerHTML += `
         <div class="slide">
-        <h3>${post.title.rendered}</h3>
-        <p>${post.content.rendered}</p>
+        <a href="post.html?id=${post.id}" class="postTitle">${post.title.rendered}</a>
+        <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" alt="${post._embedded["wp:featuredmedia"][0].alt_text}" class="postImg"></img>
         </div>`
 
     });
@@ -33,8 +32,9 @@ async function getPost (url) {
       slide.style.transform = `translateX(${i * 100}%)`;
     });
     
+    let minSlide = 0;
     let curSlide = 0;
-    let maxSlide = 6;
+    let maxSlide = 5;
     
     nextSlide.addEventListener("click", function () {
         if (curSlide === maxSlide) {
@@ -53,7 +53,7 @@ async function getPost (url) {
 
     prevSlide.addEventListener("click", function () {
 
-      if (curSlide === maxSlide) {
+      if (curSlide === maxSlide || curSlide === minSlide) {
         curSlide = 0;
           } else {
     curSlide--;
@@ -66,6 +66,6 @@ async function getPost (url) {
     
 }
 
-getPost(url);
+getPosts(apiUrl);
 
 
