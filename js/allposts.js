@@ -6,21 +6,18 @@ async function getAllPosts (url) {
     const response = await fetch(url);
     const allPosts = await response.json()
     
-    console.log(allPosts)
-
     allPosts.forEach(function(post) {
         postContainer.innerHTML += `
         <div class="allposts">
+        <div class="allposts-outer">
+        <div class="allposts-inner">
         <h2 class="postTitle">${post.title.rendered}</h2>
-        <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="postImg"></img>
-        <div class="info">
-        <p>Created by: ${post._embedded.author[0].name}</p>
-        <p>Last modified: ${post.modified}</p>
+        <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" class="postImg"></img>
+        </div>
         </div>
         </div>`
 
     });
-
 }
 
 getAllPosts(apiAllPostUrl)

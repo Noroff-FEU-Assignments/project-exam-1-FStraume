@@ -37,24 +37,20 @@
         <form id="contactform">
             <div class="form-wrapper">
                 <section class="input_info">
-                    <label for="name">Full name</label>
-                    <div class="formerror" id="nameError">Please enter your full name (must be more than 5 characters)</div>
-                  <input type="text" id="name" name="Full Name">
-                <label for="email">Email</label>
+                    <div class="formerror" id="nameError">Please enter your full name (minimum 5 characters)</div>
+                  <input type="text" id="name" name="Full Name" placeholder="Full name">
                 <div class="formerror" id="emailError">Please enter a valid email address</div>
-                <input type="email" id="email" name="Email">
-                <label for="subject">Subject</label>
+                <input type="email" id="email" name="Email" placeholder="Email">
                 <div class="formerror" id="subjectError">Subject must include more than 15 characters</div>
-                <input type="text" id="subject" name="Subject">
+                <input type="text" id="subject" name="Subject" placeholder="Subject">
                 <div>
-                    <input type="checkbox" id="email-updates" name="Email Updates">
+                <input type="checkbox" id="email-updates" name="Email Updates">
                     <label for="email-updates">Sign up for newsletter and email updates</label>
                 </div>
                 </section>
                 <section>
-                    <label for="message">Message</label>
                     <div class="formerror" id="messageError">Message field must contain more than 25 characters</div>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea id="message" name="message" placeholder="Message"></textarea>
                 </section>
             </div>
             <input type="submit" value="Send Now" class="contact_cta" />

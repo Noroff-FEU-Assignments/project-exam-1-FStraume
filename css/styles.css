@@ -9,16 +9,20 @@
 }
 html, 
 body {
+
     scroll-behavior: smooth;
-    height: 100%;
+
     margin: 0px;
     padding: 0px;
 }
 
 body {
+    min-height: 100vh;
     font-family: "Montserrat", 'Gill Sans MT', 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #FCFCFC;
     color: #707070;
+    display: flex;
+    flex-direction: column;
 }
 
 h1,
@@ -40,7 +44,6 @@ header {
     display: grid;
     grid-template-columns: 300px 1fr;
     align-items: self-end;
-    margin-bottom: 75px;
 }
 
 .logo {
@@ -54,16 +57,15 @@ header {
 
 footer {
  text-align: center;
- position: fixed;
- bottom: 0;
+    margin-top: auto;
  width: 100%;
- height: 60px;
+ background-color: #fff;
 }
 
 
 main {
     max-width: 1000px;
-    margin: auto;
+    margin-top: 100px;
 }
 
 h2 {
@@ -82,18 +84,19 @@ h3 {
     box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
+    min-height: 75px;
     z-index: 3;
-    height: 75px;
   }
   
   .menu {
-    margin: 0;
+    margin-top: 17px;
     padding: 0;
     overflow: hidden;
     background-color: #fff;
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
+
   }
   
     li {
@@ -177,23 +180,21 @@ h3 {
 
 /*Front page */
 
-.fp-1 {
-    height: 190px;
+.fp-1, .allpost-view {
     display: grid;
     place-items: center;
   }
   
   .fp-1-slider {
     width: 100%;
-    height: 400px;
+    height: 200px;
     position: relative;
     overflow: hidden;
   }
   
   .slide {
     width: 100%;
-    height: 350px;
-
+    height: 160px;
   }
 
   .slide {
@@ -205,8 +206,7 @@ h3 {
     padding: 40px;
 }
 
-  .slide-inner, 
-  .allposts{
+  .slide-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.1);
@@ -215,6 +215,7 @@ h3 {
   .slide-selector {
     text-align: center;
     padding: 10px;
+    margin-top: 35px;
 }
 
 .btn {
@@ -252,14 +253,14 @@ h3 {
   .postTitle {
     font-size: 1em;
     text-align: left;
+    padding: 2px;
   }
 
   .postImg {
-    width: 100%;
-    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    justify-self: end;
   }
 
 /* Contact */
@@ -283,9 +284,13 @@ textarea {
     height: 300px;
 }
 
-.contact_form, 
-.contact_cta {
+.contact_form {
     font-family: "Montserrat", 'Gill Sans MT', 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 1000px;
+    margin: auto 20px;
+
+}
+.contact_cta {
     max-width: 1000px;
     margin: auto;
 }
@@ -363,7 +368,38 @@ textarea {
     font-size: 50px;
 }
 
-@media (min-width: 900px) {
+/* Articles */
+
+.allposts {
+    margin-bottom: 18px;
+    width: 100%;
+    height: 160px;
+    
+
+}
+
+.allposts-outer{
+    padding: 10px;
+
+}
+
+.allposts-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+
+
+}
+
+.info p {
+    font-size: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+@media (min-width: 600px) {
     .header li {
       float: left;
     }
@@ -379,3 +415,24 @@ textarea {
       display: none;
     }
   }
+
+
+
+@media (min-width: 950px) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+
+*/
