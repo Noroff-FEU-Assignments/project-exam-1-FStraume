@@ -178,7 +178,7 @@ h3 {
 /*Front page */
 
 .fp-1 {
-    height: 650px;
+    height: 190px;
     display: grid;
     place-items: center;
   }
@@ -208,7 +208,7 @@ h3 {
   .slide-inner, 
   .allposts{
     display: grid;
-    grid-template-columns: 1fr 350px;
+    grid-template-columns: 1fr 1fr;
     box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.1);
   }
 
@@ -220,6 +220,11 @@ h3 {
 .btn {
     background: none;
     border: none;
+}
+
+.btn img {
+    height: 15px;
+    width: 15px;
 }
   
   .btn:active {
@@ -236,9 +241,16 @@ h3 {
     right: 2%;
   }
 
+.dot {
+    display: inline;
+}
+
+.activeDot {
+    color: red;
+}
 
   .postTitle {
-    font-size: 3em;
+    font-size: 1em;
     text-align: left;
   }
 

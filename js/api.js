@@ -28,7 +28,6 @@ async function getPosts (url) {
     const slides = document.querySelectorAll(".slide");
     const nextSlide = document.querySelector(".btn-next");
     
-    
     slides.forEach((slide, i) => {
       slide.style.transform = `translateX(${i * 100}%)`;
     });
