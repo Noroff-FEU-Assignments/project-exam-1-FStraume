@@ -11,7 +11,7 @@ async function getAllPosts (url) {
         <div class="allposts">
         <div class="allposts-outer">
         <div class="allposts-inner">
-        <h2 class="postTitle">${post.title.rendered}</h2>
+        <a href="post.html?id=${post.id}" class="postTitle">${post.title.rendered}</a>
         <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" class="postImg"></img>
         </div>
         </div>

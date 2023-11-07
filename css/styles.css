@@ -314,31 +314,52 @@ textarea {
 }
 
 .verification {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 50px;
     text-align: center;
     padding: 50px;
 }
 
-.verify a {
+.verification a {
     text-decoration: underline;
     font-size: 1.5em;
 }
 
 /* My Journey */
 
+.myj-main {
+    margin: 0;
+}
+
+.myj-header-img {
+    height: 290px;
+    width: 100%;
+}
+
 .myj-1-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 200px;
+    grid-template-columns: 1fr;
+    margin: 0px 20px;
 }
 
 .myj-1-container img {
-    justify-self: center
+    justify-self: center;
+    height: 200px;
+    width: 100%;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
+
 }
 
 .myj-2-container {
     display: grid;
-    grid-template-columns: 450px 1fr;
+    grid-template-columns: 170px 1fr;
     margin-top: 80px;
+}
+
+.myj-2-container img {
+    height: 113px;
+    width: 170px;
 }
 
 .myj-po-sign {
@@ -347,10 +368,12 @@ textarea {
 
 .myj-po-sign p {
     margin: 5px;
+    font-size: 10px;
 }
 
 .myj-po-sign h2 {
     margin: 5px;
+    font-size: 20px;
 }
 
 /* Spesific Post */
@@ -392,11 +415,31 @@ textarea {
 
 }
 
-.info p {
-    font-size: 8px;
-    padding: 0;
-    margin: 0;
+
+
+
+/* Spesific Post */
+
+#spesificPost {
+    margin: 0px 20px;
 }
+
+.spesificPost h2 {
+    font-size: 2em;
+}
+
+.spesificPost img {
+    width: 100%;
+}
+
+.info {
+    font-size: 8px;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
 
 /*
 @media (min-width: 600px) {
