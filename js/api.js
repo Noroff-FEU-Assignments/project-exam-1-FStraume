@@ -1,4 +1,4 @@
-const apiUrl = "https://straume.online/thepowderchase/wp-json/wp/v2/posts?_embed";
+const apiUrl = "https://straume.online/thepowderchase/wp-json/wp/v2/posts?per_page=6&_embed";
 const container = document.querySelector(".ap-1")
 const latestcontainer = document.querySelector(".fp-1-slider")
 
@@ -11,9 +11,14 @@ async function getPosts (url) {
     console.log(posts)
     posts.forEach(function(post) {
         latestcontainer.innerHTML += `
+
         <div class="slide">
+        <div class="slide-outer">
+        <div class="slide-inner">
         <a href="post.html?id=${post.id}" class="postTitle">${post.title.rendered}</a>
-        <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" alt="${post._embedded["wp:featuredmedia"][0].alt_text}" class="postImg"></img>
+        <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${post._embedded["wp:featuredmedia"][0].alt_text}" class="postImg"></img>
+        </div>
+        </div>
         </div>`
 
     });
