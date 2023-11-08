@@ -7,11 +7,9 @@ async function getPosts (url) {
   try {
     const response = await fetch(url);
     const posts = await response.json()
-    
-    console.log(posts)
+
     posts.forEach(function(post) {
         latestcontainer.innerHTML += `
-
         <div class="slide">
         <div class="slide-outer">
         <div class="slide-inner">
@@ -64,7 +62,12 @@ async function getPosts (url) {
   });
 });
   } catch (error) {
-    console.log(error)
+    latestcontainer.innerHTML = `
+    <div class="errorApiHandle">
+    <h2>Sorry!</h2>
+    <p>Could not retrive the posts...<p>
+    <p class="errorApiMessage">${error}</p>
+    </div>` 
   }
 
 

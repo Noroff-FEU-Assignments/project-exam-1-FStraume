@@ -21,7 +21,12 @@ async function fetchPost(spesificPost) {
         console.log(spesificId)
         createHTML(spesificId)
     } catch (error) {
-    console.log(error) 
+        articleView.innerHTML = `
+        <div class="errorApiHandle">
+        <h2>Sorry!</h2>
+        <p>Could not retrive the post...<p>
+        <p class="errorApiMessage">${error}</p>
+        </div>` 
     }
 
 
