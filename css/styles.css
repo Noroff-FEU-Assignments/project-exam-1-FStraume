@@ -42,7 +42,7 @@ a {
 
 header {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 200px 1fr;
     align-items: self-end;
 }
 
@@ -180,6 +180,13 @@ h3 {
 
 /*Front page */
 
+
+.fp-1 h2 {
+    font-size: 20px;
+    justify-self: left;
+    margin-left: 15px;
+}
+
 .fp-1, .allpost-view {
     display: grid;
     place-items: center;
@@ -203,7 +210,7 @@ h3 {
   }
 
 .slide-outer {
-    padding: 40px;
+    padding: 15px;
 }
 
   .slide-inner {
@@ -253,7 +260,7 @@ h3 {
   .postTitle {
     font-size: 1em;
     text-align: left;
-    padding: 2px;
+    padding: 4px;
   }
 
   .postImg {
@@ -408,7 +415,7 @@ textarea {
 
 .allposts-inner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 152px;
     box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.1);
     padding: 10px;
 
@@ -441,8 +448,46 @@ textarea {
 
 
 
-/*
+
 @media (min-width: 600px) {
+    .postTitle {
+        font-size: 1.5em;
+    }
+
+    .postImg {
+        max-width: 300px;
+        max-height: 250px;
+    }
+    .slide-selector {
+        margin-top: 0px;
+    }
+
+    .btn img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .allposts {
+        height: 250px;
+    }
+
+    .allposts-inner {
+        grid-template-columns: 1fr 300px;
+    }
+  }
+
+
+
+@media (min-width: 800px) {
+    
+    .logo img {
+        width: 200px;
+    }
+
+    .postTitle {
+        font-size: 2em;
+    }
+    
     .header li {
       float: left;
     }
@@ -457,25 +502,25 @@ textarea {
     .header .menu-icon {
       display: none;
     }
-  }
+
+    body{
+        align-items: center;
+    }
+
+    .fp-1 {
+        width: 780px;
+    }
+  
+    .btn img {
+        height: 25px;
+        width: 25px;
+    }
 
 
 
-@media (min-width: 950px) {
-    .header li {
-      float: left;
-    }
-    .header li a {
-      padding: 20px 30px;
-    }
-    .header .menu {
-      clear: none;
-      float: right;
-      max-height: none;
-    }
-    .header .menu-icon {
-      display: none;
-    }
-  }
 
-*/
+
+}
+
+
+
