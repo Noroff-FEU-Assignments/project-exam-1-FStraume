@@ -361,7 +361,7 @@ textarea {
 .myj-2-container {
     display: grid;
     grid-template-columns: 170px 1fr;
-    margin-top: 80px;
+    margin: 80px 20px;
 }
 
 .myj-2-container img {
