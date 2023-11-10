@@ -25,6 +25,10 @@ body {
     flex-direction: column;
 }
 
+main {
+  margin-top: 75px;
+}
+
 h1,
 h2,
 h3,
@@ -33,6 +37,11 @@ h5,
 h6 {
   font-family: "American Typewriter", 'Times New Roman', Times, serif;
   margin: 0px;
+  font-size: 2em;
+}
+
+h1 {
+  margin: 15px 0px;
   font-size: 2em;
 }
 
@@ -64,31 +73,18 @@ margin-top: auto;
  background-color: #fff;
 }
 
-.indexMain,
-.main {
-    max-width: 1000px;
-    margin: 0px;
-}
-
-main {
-    margin-top: 80px;
-}
-
 
 /* NAV DROPDOWN */
 
-.headerMain, 
+
 .header {
     position: fixed;
     width: 100%;
     min-height: 75px;
     z-index: 3;
+    background-color: #fff;
   }
 
-.header {
-    background-color: #fff;
-}
-  
   .menu {
     padding: 0;
     overflow: hidden;
@@ -97,7 +93,6 @@ main {
     max-height: 0;
     transition: max-height .2s ease-out;
     margin-top: 18px;
-
   }
   
     li {
@@ -152,10 +147,12 @@ main {
  .menu-btn {
     display: none;
   }
-  
+
+
 .menu-btn:checked ~ .menu {
     max-height: 275px;
   }
+
 
    .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
@@ -181,6 +178,10 @@ main {
 
 /*Front page */
 
+.fp-welcome {
+  margin: 15px 15px;
+}
+
 
 .fp-1 h2 {
     justify-self: left;
@@ -190,12 +191,15 @@ main {
 .fp-1, .allpost-view {
     display: grid;
     place-items: center;
+  }
+
+  .fp-1 {
     margin-top: 40px;
   }
   
   .fp-1-slider {
     width: 100%;
-    height: 200px;
+    height: 170px;
     position: relative;
     overflow: hidden;
   }
@@ -222,6 +226,10 @@ main {
 
   .slide-selector {
     text-align: center;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .btn {
@@ -230,8 +238,8 @@ main {
 }
 
 .btn img {
-    height: 20px;
-    width: 20px;
+    height: 35px;
+    width: 35px;
 }
   
   .btn:active {
@@ -271,6 +279,11 @@ main {
 
 
 /* Contact */
+
+.contact_form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 .contact_cta {
     display: block;
@@ -335,10 +348,6 @@ textarea {
 
 /* My Journey */
 
-.myj-main {
-    margin: 0;
-}
-
 .myj-header-img {
     height: 290px;
     width: 100%;
@@ -383,6 +392,11 @@ textarea {
     font-size: 20px;
 }
 
+.myj-site-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 /* Spesific Post */
 
 .spesificPost {
@@ -404,9 +418,9 @@ textarea {
     margin-bottom: 18px;
     width: 100%;
     height: 120px;
-    
-
 }
+
+
 
 .allposts-outer{
     padding: 10px;
@@ -435,9 +449,6 @@ textarea {
     margin: 0px 20px;
 }
 
-.spesificPost h2 {
-    font-size: 2em;
-}
 
 .spesificPost img {
     width: 100%;
@@ -458,25 +469,21 @@ textarea {
         font-size: 1.5em;
     }
 
-    .postImg {
-        max-width: 300px;
-        max-height: 250px;
-    }
+    .allposts-inner img {
+      width: 150px;
+      height: 150px;
+  }
+
     .slide-selector {
         margin-top: 0px;
     }
 
-    .btn img {
-        width: 20px;
-        height: 20px;
-    }
-
     .allposts {
-        height: 250px;
+        height: 170px;
     }
 
     .allposts-inner {
-        grid-template-columns: 1fr 300px;
+        grid-template-columns: 1fr 160px;
     }
   }
 
