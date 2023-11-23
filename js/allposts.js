@@ -1,5 +1,6 @@
-const apiAllPostUrl = "https://straume.online/thepowderchase/wp-json/wp/v2/posts?_embed";
+const apiAllPostUrl = "https://straume.online/thepowderchase/wp-json/wp/v2/posts?per_page=10&_embed";
 const postContainer = document.querySelector(".allpost-view")
+const showMore = document.getElementById("showMore")
 
 
 async function getAllPosts (url) {
@@ -46,3 +47,10 @@ async function getAllPosts (url) {
 
 getAllPosts(apiAllPostUrl)
 
+showMore.onclick = function() {
+    const newUrl =  "https://straume.online/thepowderchase/wp-json/wp/v2/posts?per_page=20&_embed";
+    postContainer.innerHTML = "";
+    showMore.style.display = "none"
+    getAllPosts(newUrl);
+    console.log(newUrl)
+  } 
