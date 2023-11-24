@@ -18,7 +18,7 @@ async function getAllPosts (url) {
                 <div class="allposts-outer">
                 <div class="allposts-inner">
                 <a href="post.html?id=${post.id}" class="postTitle allpost-text">${post.title.rendered}</a>
-                <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" class="postImg"></img>
+                <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" class="postImg" onclick="getModal(this)"></img>
                 </div>
                 </div>
                 </div>`
@@ -28,7 +28,7 @@ async function getAllPosts (url) {
                 <div class="allposts-outer">
                 <div class="allposts-inner">
                 <a href="post.html?id=${post.id}" class="postTitle allpost-text">${post.title.rendered}</a>
-                <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="postImg"></img>
+                <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="postImg" onclick="getModal(this)"></img>
                 </div>
                 </div>
                 </div>`

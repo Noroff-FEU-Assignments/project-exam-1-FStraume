@@ -9,15 +9,27 @@ async function getPosts (url) {
     const posts = await response.json()
 
     posts.forEach(function(post) {
+      if (window.innerWidth < 600) {
         latestcontainer.innerHTML += `
         <div class="slide">
         <div class="slide-outer">
         <div class="slide-inner">
         <a href="post.html?id=${post.id}" class="postTitle">${post.title.rendered}</a>
-        <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${post._embedded["wp:featuredmedia"][0].alt_text}" class="postImg"></img>
+        <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${post._embedded["wp:featuredmedia"][0].alt_text}" class="postImg" onclick="getModal(this)"></img>
         </div>
         </div>
         </div>`
+      } else if (window.innerWidth > 601) {
+        latestcontainer.innerHTML += `
+        <div class="slide">
+        <div class="slide-outer">
+        <div class="slide-inner">
+        <a href="post.html?id=${post.id}" class="postTitle">${post.title.rendered}</a>
+        <img src="${post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" alt="${post._embedded["wp:featuredmedia"][0].alt_text}" class="postImg" onclick="getModal(this)"></img>
+        </div>
+        </div>
+        </div>`
+      }
 
     });
 

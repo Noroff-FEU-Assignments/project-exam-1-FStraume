@@ -44,5 +44,5 @@ function createHTML(spesificId) {
     <p class="info">Created by: ${spesificId._embedded.author[0].name}</p>
     <p class="info">Last modified: ${spesificId.modified}</p>
     </div>`
-   console.log(spesificId)
+   document.title = `${spesificId.title.rendered}`
 }
