@@ -69,7 +69,12 @@ footer {
   text-align: center;
   margin-top: auto;
   width: 100%;
-  background-color: #fff;
+}
+
+.some img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 15px;
 }
 
 /* Loader */
@@ -447,6 +452,7 @@ textarea {
 
 .textContainer {
   letter-spacing: 1px;
+  line-height: 25px;
 }
 
 /* Spesific Post */
@@ -508,10 +514,6 @@ textarea {
 #spesificPost h1 {
   padding: 15px;
   font-size: 2.5em;
-}
-
-.text-content {
-  line-height: 25px;
 }
 
 .spesificPost img {

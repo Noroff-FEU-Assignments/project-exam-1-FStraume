@@ -40,7 +40,7 @@ function createHTML(spesificId) {
     <div class="spesificPost">
     <h1>${spesificId.title.rendered}</h1>
     <img src="${spesificId._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}"></img>
-    <div class="text-content">${spesificId.content.rendered}</div>
+    <div class="textContainer">${spesificId.content.rendered}</div>
     <p class="info">Created by: ${spesificId._embedded.author[0].name}</p>
     <p class="info">Last modified: ${spesificId.modified}</p>
     </div>`
