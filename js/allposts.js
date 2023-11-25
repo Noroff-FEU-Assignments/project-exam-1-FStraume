@@ -2,13 +2,14 @@ const apiAllPostUrl =
   "https://straume.online/thepowderchase/wp-json/wp/v2/posts?per_page=10&_embed";
 const postContainer = document.querySelector(".allpost-view");
 const showMore = document.getElementById("showMore");
-const loader = document.querySelector(".load")
+const loader = document.querySelector(".lds-ripple")
 
 async function getAllPosts(url) {
   try {
     const response = await fetch(url);
     const allPosts = await response.json();
     loader.style.display = "none";
+    showMore.style.display = "block"
     
 
     allPosts.forEach(function (post) {
