@@ -72,6 +72,17 @@ footer {
   background-color: #fff;
 }
 
+.load {
+  border: 16px solid white;
+  border-top: 16px solid #707070;
+  ;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 60px auto;
+  animation: spin 2s linear infinite;
+}
+
 /* NAV DROPDOWN */
 
 .header {
@@ -215,6 +226,11 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.slide-inner img {
+  width: 150px;
+  height: 150px;
 }
 
 .slide-selector {
@@ -479,8 +495,14 @@ textarea {
 #modal-image {
   display: inline-block;
   position: absolute;
+  top: 50%;
   left: 50%;
-  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-content img {
+  width: 200px;
+  height: auto;
 }
 
 @media (min-width: 600px) {
@@ -518,10 +540,20 @@ textarea {
     font-size: 2.5em;
   }
 
+  .modal-content img {
+    width: 400px;
+    height: auto;
+  }
+
 }
 
 
 @media (min-width: 800px) {
+  
+  body {
+    align-items: center;
+  }
+  
   .logo img {
     width: 200px;
   }
@@ -549,11 +581,22 @@ textarea {
   .allpost-view {
     grid-template-columns: 1fr 1fr;
   }
+
+  .modal-content img {
+    width: 500px;
+    height: auto;
+  }
+
 }
 
 @media (min-width: 1000px) {
   body {
     width: 1000px;
     margin: auto;
+  }
+
+  .modal-content img {
+    width: 800px;
+    height: auto;
   }
 }

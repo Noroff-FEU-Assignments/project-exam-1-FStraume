@@ -7,6 +7,8 @@ async function getPosts (url) {
   try {
     const response = await fetch(url);
     const posts = await response.json()
+    
+    latestcontainer.innerHTML = "";
 
     posts.forEach(function(post) {
       if (window.innerWidth < 600) {
