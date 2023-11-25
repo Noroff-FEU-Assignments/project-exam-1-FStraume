@@ -89,7 +89,7 @@ footer {
 }
 .lds-ripple div {
   position: absolute;
-  border: 4px solid  #010d26;
+  border: 4px solid #010d26;
   opacity: 1;
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
@@ -127,7 +127,6 @@ footer {
     opacity: 0;
   }
 }
-
 
 /* NAV DROPDOWN */
 
@@ -312,7 +311,6 @@ li {
   right: 2%;
 }
 
-
 .postTitle {
   font-size: 1em;
   text-align: left;
@@ -486,7 +484,6 @@ textarea {
 .btn-style {
   display: none;
   margin: 40px auto;
-
 }
 
 .allposts-outer {
@@ -530,7 +527,7 @@ textarea {
 
 .modal {
   display: none;
-  position: fixed; 
+  position: fixed;
   z-index: 1;
   padding-top: 50px;
   left: 0;
@@ -538,7 +535,7 @@ textarea {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4); 
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -598,16 +595,13 @@ textarea {
     width: 400px;
     height: auto;
   }
-
 }
 
-
 @media (min-width: 800px) {
-  
   header {
     align-self: center;
   }
-  
+
   .logo img {
     width: 200px;
   }
@@ -640,7 +634,6 @@ textarea {
     width: 500px;
     height: auto;
   }
-
 }
 
 @media (min-width: 1000px) {
