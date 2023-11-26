@@ -251,6 +251,7 @@ li {
   height: 170px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .slide {
