@@ -2,7 +2,7 @@ const apiAllPostUrl =
   "https://straume.online/thepowderchase/wp-json/wp/v2/posts?per_page=10&_embed";
 const postContainer = document.querySelector(".allpost-view");
 const showMore = document.getElementById("showMore");
-const loader = document.querySelector(".lds-ripple");
+const loader = document.querySelector(".loader-animation");
 
 async function getAllPosts(url) {
   try {
