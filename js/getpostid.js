@@ -25,7 +25,7 @@ async function fetchPost(spesificPost) {
   } catch (error) {
     articleView.innerHTML = `
         <div class="errorApiHandle">
-        <h2>Sorry!</h2>
+        <h1>Sorry!</h1>
         <p>Could not retrive the post...<p>
         <p class="errorApiMessage">${error}</p>
         </div>`;
@@ -43,5 +43,5 @@ function createHTML(spesificId) {
     <p class="info">Created by: ${spesificId._embedded.author[0].name}</p>
     <p class="info">Last modified: ${spesificId.modified}</p>
     </div>`;
-  document.title = `${spesificId.title.rendered}`;
+  document.title = `The PowderChase | ${spesificId.title.rendered}`;
 }
