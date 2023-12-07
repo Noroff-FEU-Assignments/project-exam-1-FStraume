@@ -27,28 +27,22 @@ This page is built with :
 
 ### Installing
 
-1. Clone the repository:
+Clone the repository:
 
 ```bash
 https://github.com/Noroff-FEU-Assignments/project-exam-1-FStraume.git
 ```
 
+### Running
+
+Live Server
+- Use LiveServer to run the site from VS Code.
+- LiveServer extention ID : ritwickdey.LiveServer
+
 ## Contributing
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+Contribute only to agreed on pages and tasks, please use "Pull request" for review before comitting to the main brach. 
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
-
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+[My LinkedIn page](www.linkedin.com/in/fredrik-straume-3570352a4)
