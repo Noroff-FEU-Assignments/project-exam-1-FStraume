@@ -1,6 +1,6 @@
 # The PowderChase
 
-![image](//img/ThePowderChase-Screenshot.png)
+![Alt text](<img/ThePowderChase-Screenshot.png>)
 
 The Powderchase is a peronal blog where i can make posts about my skiing adventures.
 
